@@ -67,20 +67,65 @@ const Clock: React.FC = () => {
   };
 
   const setClockNumbers = (n: number): Degrees => ({
-    transform: `translate(${Math.cos((pi * n) / 6 - pi / 2) * 135}px, ${
-      Math.sin((pi * n) / 6 - pi / 2) * 135
+    transform: `translate(${Math.cos((pi * n) / 6 - pi / 2) * 130}px, ${
+      Math.sin((pi * n) / 6 - pi / 2) * 130
     }px)`,
   });
 
   return (
     <div className="container">
       <div className="clock">
-        <div className="hours hand" style={setTheHands(time.hoursDeg)}></div>
-        <div className="minutes hand" style={setTheHands(time.minuteDeg)}></div>
-        <div
-          className="seconds hand"
-          style={setTheHands(time.secondsDeg)}
-        ></div>
+        <div className="outer-clock-face">
+          <div className="minute-one"></div>
+          <div className="minute-two"></div>
+          <div className="minute-three"></div>
+          <div className="minute-four"></div>
+
+          <div className="minute-five"></div>
+          <div className="minute-six"></div>
+          <div className="minute-seven"></div>
+          <div className="minute-eight"></div>
+
+          <div className="marking marking-one">
+            <div className="minute-one"></div>
+            <div className="minute-two"></div>
+            <div className="minute-three"></div>
+            <div className="minute-four"></div>
+          </div>
+          <div className="marking marking-two">
+            <div className="minute-one"></div>
+            <div className="minute-two"></div>
+            <div className="minute-three"></div>
+            <div className="minute-four"></div>
+          </div>
+          <div className="marking marking-three">
+            <div className="minute-one"></div>
+            <div className="minute-two"></div>
+            <div className="minute-three"></div>
+            <div className="minute-four"></div>
+          </div>
+          <div className="marking marking-four">
+            <div className="minute-one"></div>
+            <div className="minute-two"></div>
+            <div className="minute-three"></div>
+            <div className="minute-four"></div>
+          </div>
+
+          <div className="inner-clock-face">
+            <div
+              className="hours hand"
+              style={setTheHands(time.hoursDeg)}
+            ></div>
+            <div
+              className="minutes hand"
+              style={setTheHands(time.minuteDeg)}
+            ></div>
+            <div
+              className="seconds hand"
+              style={setTheHands(time.secondsDeg)}
+            ></div>
+          </div>
+        </div>
 
         {time.numbers.map((number) => (
           <div className="numbers" key={number}>

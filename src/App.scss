@@ -1,28 +1,33 @@
 html {
-    --bg: #fff6e7;
-    --text: #ff3677;
-    --clock-border: #777;
+    --bg: #ecf0f3;
+    --text: #202520;
+    --clock-border: #ecf0f3;
     --clock-bg: #fff6e7;
-    --clock-shadow-up: rgba(197, 131, 113, 0.8);
-    --clock-shadow-down: rgba(197, 131, 113, 0.7);
-    --clock-center-circle: var(--clock-border);
-    --clock-hour: #202520;
-    --clock-minute: #3a3f3a;
-    --clock-second: #202520;
+    --clock-shadow-up: #cbced1;
+    --clock-shadow-down: white;
+    --clock-center-circle: var(--clock-shadow-up);
+    --clock-hour: #c58371;
+    --clock-minute: #c58371;
+    --clock-second: #ff3677;
+    --clock-marking: #a5a7b1;
+    --clock-marking-sec: #bdbdcb;
+    --clock-marking-seconds: rgba(189, 189, 203, 0.07);
 }
 
 html[data-theme="dark"] {
-    --bg: #171717;
+    --bg: #282828;
     --text: #d9dbe9;
-    --clock-border: #bd9d49;
+    --clock-border: #282828;
     --clock-bg: #000;
-    --clock-shadow-up: rgba(0, 0, 0, 0.25);
-    --clock-shadow-down: rgba(0, 0, 0, 0.25);
-    --clock-center-circle: var(--clock-border);
-    --clock-hour: #202520;
-    --clock-hour: #fff;
-    --clock-minute: rgb(226, 226, 226);
-    --clock-second: #fff;
+    --clock-shadow-up: rgba(67, 67, 67, 0.5);
+    --clock-shadow-down: rgba(0, 0, 0, 0.5);
+    --clock-center-circle: #4d4b63;
+    --clock-hour: #61afff;
+    --clock-minute: #61afff;
+    --clock-second: #ee791a;
+    --clock-marking: #1df52f;
+    --clock-marking-sec: #bdbdcb;
+    --clock-marking-seconds: rgba(189, 189, 203, 0.07);
 }
 
 * {
@@ -49,7 +54,7 @@ body {
 
     .theme {
         padding: 0.5rem;
-        background-color: var(--clock-border);
+        background-color: var(--text);
         color: var(--clock-bg);
         border-radius: 16px;
         position: relative;
