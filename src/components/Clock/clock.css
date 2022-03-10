@@ -1,0 +1,84 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  min-width: 350px;
+  width: 100%;
+}
+
+.container .clock {
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--clock-bg);
+  border: 10px double var(--clock-border);
+  -webkit-box-shadow: 0px 14px 28px var(--clock-shadow-up), 0px 10px 10px var(--clock-shadow-down);
+          box-shadow: 0px 14px 28px var(--clock-shadow-up), 0px 10px 10px var(--clock-shadow-down);
+}
+
+.container .clock::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--clock-center-circle);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.container .clock .numbers {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  z-index: 5;
+}
+
+.container .clock .hand {
+  position: absolute;
+  border: 1px solid transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.container .clock .hand.hours {
+  width: 5px;
+  height: 30%;
+  background-color: var(--clock-hour);
+}
+
+.container .clock .hand.minutes {
+  width: 3.5px;
+  height: 40%;
+  background-color: var(--clock-minute);
+}
+
+.container .clock .hand.seconds {
+  width: 1px;
+  height: 40%;
+  background-color: var(--clock-second);
+}
+/*# sourceMappingURL=clock.css.map */

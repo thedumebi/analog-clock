@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+html {
+  --bg: #fff6e7;
+  --text: #ff3677;
+  --clock-border: #777;
+  --clock-bg: #fff6e7;
+  --clock-shadow-up: rgba(197, 131, 113, 0.8);
+  --clock-shadow-down: rgba(197, 131, 113, 0.7);
+  --clock-center-circle: var(--clock-border);
+  --clock-hour: #202520;
+  --clock-minute: #3a3f3a;
+  --clock-second: #202520;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html[data-theme="dark"] {
+  --bg: #171717;
+  --text: #d9dbe9;
+  --clock-border: #bd9d49;
+  --clock-bg: #000;
+  --clock-shadow-up: rgba(0, 0, 0, 0.25);
+  --clock-shadow-down: rgba(0, 0, 0, 0.25);
+  --clock-center-circle: var(--clock-border);
+  --clock-hour: #202520;
+  --clock-hour: #fff;
+  --clock-minute: rgb(226, 226, 226);
+  --clock-second: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: montserrat, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+.app_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.app_container .theme {
+  padding: 0.5rem;
+  background-color: var(--clock-border);
+  color: var(--clock-bg);
+  border-radius: 16px;
+  position: relative;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */
